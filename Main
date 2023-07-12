@@ -141,6 +141,7 @@ local ThemeManager = {} do
 	end
 
 	function ThemeManager:GetCustomTheme(file)
+	if file then
 		if not isfile(self.Folder .. '/themes/' .. file) then
 			return nil
 		end
@@ -194,6 +195,7 @@ local ThemeManager = {} do
 		end
 
 		return out
+		end
 	end
 
 	function ThemeManager:SetLibrary(lib)
