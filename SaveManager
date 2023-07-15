@@ -259,6 +259,8 @@ do
                 writefile(self.Folder .. '/settings/autoload.txt', name)
                 SaveManager.AutoloadLabel:SetText('Current autoload config: ' .. name)
                 self.Library:Notify(string.format('Set %q to auto load', name))
+            else
+                return self.Library:Notify('Failed to set as autoload: nil');
             end
         end)
 
